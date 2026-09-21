@@ -49,6 +49,39 @@ produce a consistent post from it.
 7. **Commit and push**: `git add -A && git commit -m "Add post: <title>"`.
    Auto-deploys via GitHub Pages — nothing else needed.
 
+## Haul posts (a different, real-first-person content type)
+
+Alongside the evergreen guides above, this site also carries **haul posts** —
+Michelle's own real Daraz orders, with her own photos and honest opinions.
+These are the one place on the site where first-person "I bought this and
+here's what I think" framing is not only allowed but the whole point —
+unlike the evergreen guides, which explicitly avoid claiming hands-on testing
+that didn't happen. Don't blend the two styles.
+
+**Workflow:**
+1. Michelle sends photos of what she ordered + the price paid + her honest
+   take per item (worth it, quality, sizing, any issues) + ideally the Daraz
+   product link for each.
+2. Save her photos into `assets/hauls/<slug>/` (create the folder).
+3. Copy `templates/haul-post-template.html` to `posts/<slug>.html` and fill
+   in every placeholder — title, date, one `.haul-item` per product using
+   her real photo paths, her real prices and her real words for the "take,"
+   not invented copy.
+4. Tag it `<span class="post-tag tag-hauls">Haul</span>`.
+5. Add it to `index.html`'s post-grid and to `sitemap.xml`, same as any post.
+6. If a product link is available and the Daraz Affiliate Program is
+   approved, use the real affiliate link; otherwise mark it
+   `<!-- AFF:describe-product -->` pointing at the plain product URL, same
+   convention as the rest of the site.
+7. Commit and push.
+
+Never write a haul post from scratch without her actual photos/details —
+fabricating a "haul" she didn't really do would be dishonest and is exactly
+the kind of fake-experience content the rest of this playbook explicitly
+warns against for the evergreen guides. If a scheduled/automated run reaches
+this point in the backlog with no haul material provided, skip haul content
+that cycle and write an evergreen guide instead.
+
 ## Topic backlog (rough priority order)
 
 - Daraz return & refund process explained step by step (marketplace vs. DarazMall windows, what voids a return)

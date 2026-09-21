@@ -45,6 +45,14 @@ bit before applying.
 Follow `CONTENT-PLAYBOOK.md` — exact structure, style rules, and a topic
 backlog so new posts stay consistent with the first three.
 
+## Haul posts (your own real orders)
+
+This site also supports haul posts — real photos and honest takes from
+Michelle's own Daraz orders, as opposed to the general evergreen guides.
+Send photos + prices + your take per item, and see the "Haul posts" section
+of `CONTENT-PLAYBOOK.md` for the exact process
+(`templates/haul-post-template.html` is ready to fill in).
+
 ## Legal basics already handled
 
 - `disclosure.html` — affiliate disclosure, worded to reflect that

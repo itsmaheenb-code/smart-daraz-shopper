@@ -16,6 +16,8 @@
   --plum-soft: #f0e7f7;
   --navy: #33243b;
   --navy-soft: #ece4f0;
+  --peach: #c1642c;
+  --peach-soft: #fbe9dc;
   --card: #ffffff;
   --border: #ecdfda;
   --shadow: 0 1px 2px rgba(34, 28, 30, 0.04), 0 8px 24px rgba(34, 28, 30, 0.06);
@@ -348,6 +350,7 @@ tbody tr:hover { background: #fdfaf9; }
 .tag-sellers { background: var(--teal-soft); color: var(--teal); }
 .tag-returns { background: var(--plum-soft); color: var(--plum); }
 .tag-payments { background: var(--navy-soft); color: var(--navy); }
+.tag-hauls { background: var(--peach-soft); color: var(--peach); }
 
 .post-card .post-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -362,6 +365,102 @@ tbody tr:hover { background: #fdfaf9; }
   font-size: 0.95rem;
   margin: 0;
 }
+
+/* Haul photo galleries */
+.haul-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.1rem;
+  margin: 1.75rem 0;
+}
+
+.haul-item {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.haul-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+
+.haul-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--bg-dot);
+}
+
+.haul-item .price-badge {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  background: rgba(34, 28, 30, 0.82);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  backdrop-filter: none;
+}
+
+.haul-item .haul-caption {
+  padding: 0.9rem 1rem 1.1rem;
+}
+
+.haul-item .haul-caption strong {
+  display: block;
+  font-size: 0.98rem;
+  margin-bottom: 0.25rem;
+}
+
+.haul-item .haul-caption p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.haul-item .haul-caption a.plain-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Small section icon accents */
+.section-icon {
+  display: inline-block;
+  margin-right: 0.4rem;
+  font-size: 1.05em;
+}
+
+/* Quick category nav row on homepage */
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.category-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.category-nav a:hover { color: var(--accent); transform: translateY(-1px); }
 
 footer.site-footer {
   background: var(--navy);
