@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itsmaheenb-code.github.io/smart-daraz-shopper/sitemap.xml
